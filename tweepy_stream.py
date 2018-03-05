@@ -11,6 +11,6 @@ class BitcoinStreamListener(tweepy.StreamListener):
 apiConfig = APIConfig()
 auth = apiConfig.createAuth()
 
-myStreamListener = MyStreamListener()
-myStream = tweepy.Stream(auth, myStreamListener)
-myStream.filter(track=['bitcoin'])
+btcStreamListener = BitcoinStreamListener()
+stream = tweepy.Stream(auth, btcStreamListener)
+stream.filter(track=['bitcoin'])
